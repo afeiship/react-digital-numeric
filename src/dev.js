@@ -25,8 +25,14 @@ class App extends React.Component{
     return (
       <div className="hello-react-digital-numeric">
         <ReactDigitalNumeric value='2018-12-08' ref='rc' />
-        <div className="blank-20"/>
+        <div className="blank-20" />
         <ReactDigitalNumeric value='14:20:12.120' ref='rc' />
+
+        <div className="blank-20" /><div className="blank-20" />
+
+        <ReactDigitalNumeric flat value='2018-12-08' ref='rc' />
+        <div className="blank-20" />
+        <ReactDigitalNumeric flat value='14:20:12.120' ref='rc' />
       </div>
     );
   }

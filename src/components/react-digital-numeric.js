@@ -14,6 +14,7 @@ export default class extends Component{
   static propTypes = {
     className: PropTypes.string,
     value: PropTypes.string,
+    flat: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -26,14 +27,14 @@ export default class extends Component{
   }
 
   render(){
-    const { className, ...props } = this.props;
+    const { className, flat, ...props } = this.props;
     const items = this.items;
     return (
       <div {...props} className={classNames('react-digital-numeric',className)}>
         {
           items.map((item, index)=>{
             return (
-              <ReactDigital key={index} value={item} />
+              <ReactDigital flat={flat} key={index} value={item} />
             )
           })
         }
