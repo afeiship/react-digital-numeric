@@ -1,67 +1,64 @@
 # react-digital-numeric
-> Numeric &amp; time &amp; date use react digital
+> Numeric & time & date use react digital.
 
-## properties:
-```javascript
+## installation
+```shell
+npm install -S @feizheng/react-digital-numeric
+```
 
-  static propTypes = {
-    className: PropTypes.string,
-    value: PropTypes.string,
-  };
+## update
+```shell
+npm update @feizheng/react-digital-numeric
+```
 
-  static defaultProps = {
-  };
+## properties
+| Name      | Type   | Default | Description                           |
+| --------- | ------ | ------- | ------------------------------------- |
+| className | string | -       | The extended className for component. |
+| value     | any    | -       | Default value.                        |
+| onChange  | func   | -       | The change handler.                   |
+| flat      | bool   | -       | If digit equal width.                 |
+
+
+## usage
+1. import css
+  ```scss
+  @import "~@feizheng/react-digital/dist/style.scss";
+  @import "~@feizheng/react-digital-numeric/dist/style.scss";
   
-```
+  // customize your styles:
+  $react-digital-numeric-options: ()
+  ```
+2. import js
+  ```js
+  import ReactDigitalNumeric from '@feizheng/react-digital-numeric';
+  import ReactDOM from 'react-dom';
+  import React from 'react';
+  import './assets/style.scss';
 
-## install && import:
-```bash
-npm install --save afeiship/react-digital-numeric --registry=https://registry.npm.taobao.org
-```
+  class App extends React.Component {
+    componentDidMount() {}
+    render() {
+      return (
+        <div className="app-container">
+          <ReactDigitalNumeric value="2018-12-08" ref="rc" />
+          <div className="blank-20" />
+          <ReactDigitalNumeric value="14:20:12.120" ref="rc" />
 
-```js
-import ReactDigitalNumeric from 'react-digital-numeric';
-```
+          <div className="blank-20" />
+          <div className="blank-20" />
 
-```scss
-// customize your styles:
-$react-digital-numeric-options:(
-);
-
-@import 'node_modules/react-digital-numeric/dist/style.scss';
-```
-
-
-## usage:
-```jsx
-
-// install: npm install afeiship/react-digital-numeric --save
-// import : import ReactDigitalNumeric from 'react-digital-numeric'
-
-class App extends React.Component{
-
-  state = {
-
-  };
-
-  constructor(props){
-
-    super(props);
-    window.demo = this;
-    window.refs = this.refs;
-    window.rc = this.refs.rc;
+          <ReactDigitalNumeric flat value="2018-12-08" ref="rc" />
+          <div className="blank-20" />
+          <ReactDigitalNumeric flat value="14:20:12.120" ref="rc" />
+        </div>
+      );
+    }
   }
 
-  render(){
+  ReactDOM.render(<App />, document.getElementById('app'));
 
-    return (
-      <div className="hello-react-digital-numeric">
-        <ReactDigitalNumeric value='2018-12-08' ref='rc' />
-        <div className="blank-20"/>
-        <ReactDigitalNumeric value='14:20:12.120' ref='rc' />
-      </div>
-    );
-  }
-}
+  ```
 
-```
+## documentation
+- https://afeiship.github.io/react-digital-numeric/

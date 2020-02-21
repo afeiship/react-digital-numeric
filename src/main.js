@@ -1,2 +1,2 @@
-import ReactDigitalNumeric from 'components/react-digital-numeric';
+import ReactDigitalNumeric from './components';
 export default ReactDigitalNumeric;

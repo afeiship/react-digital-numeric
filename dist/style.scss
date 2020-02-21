@@ -1,12 +1,9 @@
-$react-digital-numeric-options:(
+$react-digital-numeric-options: () !default;
 
-)!default;
-
-@import 'node_modules/react-digital/dist/style.scss';
-.react-digital-numeric{
-  color:#000;
+.react-digital-numeric {
+  color: #000;
   overflow: hidden;
-  .react-digital{
+  .react-digital {
     float: left;
     margin-right: 5px;
   }
