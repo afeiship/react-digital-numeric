@@ -1,24 +1,23 @@
-import ReactDigitalNumeric from '../src/main';
-import ReactDOM from 'react-dom';
+import ReactDemokit from '@jswork/react-demokit';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactDigitalNumeric from '../src/main';
 import './assets/style.scss';
 
 class App extends React.Component {
-  componentDidMount() {}
   render() {
     return (
-      <div className="app-container">
-        <ReactDigitalNumeric value="2018-12-08" ref="rc" />
-        <div className="blank-20" />
-        <ReactDigitalNumeric value="14:20:12.120" ref="rc" />
-
-        <div className="blank-20" />
-        <div className="blank-20" />
-
-        <ReactDigitalNumeric flat value="2018-12-08" ref="rc" />
-        <div className="blank-20" />
-        <ReactDigitalNumeric flat value="14:20:12.120" ref="rc" />
-      </div>
+      <ReactDemokit
+        className="p-3 app-container"
+        url="https://github.com/afeiship/react-digital-numeric">
+        <ReactDigitalNumeric className="mb-2" value="2018-12-08" />
+        <hr />
+        <ReactDigitalNumeric className="mb-2" value="14:20:12.120" />
+        <hr />
+        <ReactDigitalNumeric className="mb-2" flat value="2018-12-08" />
+        <hr />
+        <ReactDigitalNumeric className="mb-2" flat value="14:20:12.120" />
+      </ReactDemokit>
     );
   }
 }
